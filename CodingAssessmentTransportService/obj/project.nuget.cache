@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6peS/Amvhx6Mp2uMf0NWJCxscTxGxXZtNkkaFiMDl7lmzlzJ53NMb9dmGluApB+aCMBFYC6IB0tQfs8cS0AHhw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gral_\\source\\repos\\CodingAssessmentTransportService\\CodingAssessmentTransportService\\CodingAssessmentTransportService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gral_\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,53 @@
+﻿@page
+@model CodingAssessmentTransportService.Pages.IndexModel
+@{
+    ViewData["Title"] = "List Of Cars";
+}
+
+<h1>  Price Guess</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Doors</th>
+            <th>Color</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model.Cars)
+        {
+            <tr>
+                <td>@car.Id</td>
+                <td>@car.Make</td>
+                <td>@car.Model</td>
+                <td>@car.Year</td>
+                <td>@car.Doors</td>
+                <td>@car.Color</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Guess the Price</h2>
+<form method="post"  >
+    <div class="form-group">
+        <label for="selectedCarId">Car ID</label>
+        <input type="number" class="form-control" id="selectedCarId" name="SelectedCarId" required />
+    </div>
+    <div class="form-group">
+        <label for="guessedPrice">Guessed Price</label>
+        <input type="number" class="form-control" id="guessedPrice" name="GuessedPrice" step="0.01" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Guess</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <div class="mt-3">
+        <span class="@(Model.Message.Contains("Great job") ? "text-success" : "text-danger")">@Model.Message</span>
+    </div>
+}
